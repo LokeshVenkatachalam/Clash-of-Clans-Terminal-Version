@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Bahubashak_Backend"
+		},
+		{
+			"path": "../Brick-Breaker"
+		},
+		{
+			"path": "../brick-breaker"
+		},
+		{
+			"path": "../py-game"
+		}
+	],
+	"settings": {}
+}
