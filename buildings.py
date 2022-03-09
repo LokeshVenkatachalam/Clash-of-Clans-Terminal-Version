@@ -18,7 +18,8 @@ class building(cell):
         self.height = height
         self.width = width
         self.x2 = self.x_start + width 
-        self.y2 = self.y_start + height 
+        self.y2 = self.y_start + height
+        self.alive = True 
     
     def display(self):
         
@@ -26,18 +27,19 @@ class building(cell):
             for y_coord in range(self.y_start,self.y2):
                 self.game.board[y_coord][x_coord] =self.color+self.symbol
                 self.game.map[y_coord][x_coord] = self
+        
     
     def attack(self,hitpoint):
         self.health -= hitpoint
         if(self.health <= 0):
-            self.destroy_building(self)
+            self.destroy_building()
     
     def destroy_building(self):
-
         for x_coord in range(self.x_start,self.x2):
             for y_coord in range(self.y_start,self.y2):
                 self.game.board[y_coord][x_coord] = ' '
                 self.game.map[y_coord][x_coord] = empty(self.game,x_coord,y_coord)
+        self.alive = False
                 
 
 class town_Hall(building):
@@ -68,10 +70,12 @@ class cannon(building):
         super().destroy_building()
 
 class wall(building):
+
     def __init__(self,game,x_start,y_start,name="Wall",health=100,strength = 50,color=Fore.YELLOW,symbol="W",height=1,width=1):
         super().__init__(game,name,health,strength,color,symbol,x_start,y_start,height,width)
 
 class empty(cell):
     def __init__(self,game,x_start,y_start,name="Empty"):
         super().__init__(game,name,x_start,y_start)
-    
+    def attack(self,hitpoint):
+        pass

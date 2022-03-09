@@ -27,4 +27,5 @@ class village:
                                 wall(game,20,6),wall(game,20,7),wall(game,20,8),wall(game,20,9),wall(game,20,10),wall(game,20,11),wall(game,20,12),wall(game,20,13),wall(game,20,14),wall(game,20,15),wall(game,20,16),
                                 wall(game,10,10),wall(game,10,11),wall(game,10,12),wall(game,10,13),wall(game,10,14),
                                 wall(game,11,14),wall(game,12,14),wall(game,13,14),wall(game,14,14),wall(game,15,14)]
-        self.attackers = []
+        self.attacker_King = []
+        self.attacker_Barbarian = []
