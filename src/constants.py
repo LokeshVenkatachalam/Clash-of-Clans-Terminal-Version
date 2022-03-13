@@ -3,5 +3,5 @@ ROW = 20
 COL = 31
 
 # time
-FPS = 40
+FPS = 5
 TP = 1/FPS

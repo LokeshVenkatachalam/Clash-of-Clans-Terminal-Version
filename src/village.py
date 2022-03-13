@@ -1,6 +1,6 @@
 from colorama import Fore, Back, Style
 from buildings import hut, town_Hall, cannon, wall
-
+from attackers import king,barbarian
 class village:
     def __init__(self,game):
         self.existing_Building =[town_Hall(game,12,10),
