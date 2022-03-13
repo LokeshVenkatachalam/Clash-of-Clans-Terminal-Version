@@ -49,6 +49,7 @@ class Game:
     def run(self):
         self.time_Start = time.time()
         self.start()
+        print("\033[H\033[J", end="")
         self.display()
         self.game_over_win = True
         self.game_over_lose = True
@@ -204,7 +205,7 @@ class Game:
                 #print(king_bar_count)
                 for i in range(king_bar_count):
                     king_bar = king_bar +("|")
-            print(king_bar)
+                print(king_bar)
             time.sleep(TP)
             
             
