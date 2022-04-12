@@ -8,11 +8,46 @@
 
 ### Troops
 
-- 1 King 
-- 6 Barbarian
+- 1 King or 1 Queen
+- 5 Barbarian
+- 5 Archer
+- 3 Balloon
 
 ### Moves
 
+#### Spawn Keys
+
+| Troop Name | Spawn 1 (0,12)  | Spawn (15,0)  | Spawn 3 (39,12) |
+| ---------- | -------- | -------- | -------- |
+| **King**       | `J`      | `K`      | `L`      |
+| **Queen**      | `J`      | `K`      | `L`      |
+| **Barbarian**  | `I`      | `O`      | `P`      |
+| **Archer**     | `T`      | `Y`      | `U`      |
+| **Balloon**    | `Z`      | `X`      | `C`      |
+
+#### Movement Keys
+
+| Troop Name     | UP       | DOWN     | LEFT     | RIGHT     |
+| -------------- | -------- | -------- | -------- |  -------- |
+| **King**       | `W`      | `A`      | `S`      | `D`       |
+| **Queen**      | `W`      | `A`      | `S`      | `D`       |
+
+#### Attack Keys
+
+| Troop Name     | Attack   |
+| -------------- | -------- |
+| **King**       | `SpaceBar` |
+| **Queen**      | `SpaceBar` |
+
+#### Spells
+
+- `m` Double movement speed and attack power for all troops 12 Timeperiod
+- `n` 1.5 Times health for all troops
+
+## Maps
+
+![image](./Documents/village_ass2.png)
+<!-- 
 #### King Spawning
 
 - `k` Spawn king in (0,13)
@@ -35,15 +70,12 @@
 - `o` Spawn Barbarian in (0,13)
 - `i` Spawn Barbarian in (12,0)
 - `p` Spawn Barbarian in (29,12)
-
-#### Spells
-
-- `m` Double movement speed and attack power for all troops 12 Timeperiod
-- `n` 1.5 Times health for all troops
+ -->
 
 ## REPLAY
 
 - `python3 replay.py <file_name from ./replays>`
+
 ### OOPS concepts
 
 #### Inheritance
@@ -62,6 +94,7 @@ class king(attackers):
     .
     .
 ```
+
 #### Polymorphism
 
 - Polymorphism is the ability of an object/function to take on many forms.
@@ -76,4 +109,4 @@ class king(attackers):
 #### Abstraction
 
 - Classes having their function
-- `King` has `attack()` function 
+- `King` has `attack()` function

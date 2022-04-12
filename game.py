@@ -19,8 +19,18 @@ from input import input_to
 from constants import ROW,COL
 from gameplay import Game
 from village import village
-from buildings import empty,town_Hall,hut,cannon
-from attackers import king,barbarian
+from Build_buildings import empty
+from Build_Town_Hall import town_Hall
+from Build_Hut import hut
+from Build_Cannon import cannon
+from Build_WizardTower import WizardTower
+from Troop_attackers import attackers
+from Troop_King import King
+from Troop_Queen import Queen
+from Troop_Archer import Archer
+from Troop_Balloons import Balloon
+from Troop_Barbarian import Barbarian
+
 
   
 file_name_found = False
@@ -35,12 +45,19 @@ while(file_name_found == False):
 game = Game()
 empty_village = [[' ' for i in range(COL)] for j in range(ROW)]
 for j in range(ROW):
-    empty_village[j][30]='\n';  
+    empty_village[j][40]='\n';
 empty_village_map = [[empty(game,i,j) for i in range(COL)] for j in range(ROW)]
+
 game.board = copy.deepcopy(empty_village)
 game.map = copy.deepcopy(empty_village_map)
-game.start()
-game.run()
+game.air_board = copy.deepcopy(empty_village)
+game.air_map = copy.deepcopy(empty_village_map)
+
+game.Choose_Character()
+
+if(game.game_over == False):
+    game.start()
+    game.run()
 file.write(game.input_File)
 #file.close()
 
